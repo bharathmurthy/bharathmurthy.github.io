@@ -83,7 +83,7 @@ const Portfolio = () => {
   );
 
   const experienceSection = (
-    <div className="py-20 px-8">
+    <div id="work" className="py-20 px-8">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold mb-12 text-center">Experience</h2>
         <div className="space-y-12">
@@ -148,19 +148,19 @@ const Portfolio = () => {
   );
 
   const contactSection = (
-    <div className="py-20 px-8">
+    <div id="contact"  className="py-20 px-8">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-12">Let's Connect</h2>
         <div className="flex justify-center gap-8">
-          <a href="https://github.com/yourusername" className="flex items-center gap-2 text-gray-600 hover:text-blue-600">
+          <a href="https://github.com/bharathmurthy" className="flex items-center gap-2 text-gray-600 hover:text-blue-600">
             <Github size={24} />
             <span>GitHub</span>
           </a>
-          <a href="https://linkedin.com/in/yourusername" className="flex items-center gap-2 text-gray-600 hover:text-blue-600">
+          <a href="https://www.linkedin.com/in/kumarmurthy/" className="flex items-center gap-2 text-gray-600 hover:text-blue-600">
             <Linkedin size={24} />
             <span>LinkedIn</span>
           </a>
-          <a href="mailto:your.email@example.com" className="flex items-center gap-2 text-gray-600 hover:text-blue-600">
+          <a href="mailto:your.bharathmurthy1992@gmail.com" className="flex items-center gap-2 text-gray-600 hover:text-blue-600">
             <Mail size={24} />
             <span>Email</span>
           </a>
