@@ -11,12 +11,26 @@ const Portfolio = () => {
         <h2 className="text-3xl mb-8">Senior Product Manager</h2>
         <p className="text-xl mb-8">Building the future of Intelligent Virtual Agents | Tech Enthusiast | Travel Lover</p>
         <div className="flex gap-4 justify-center">
-          <a href="#work" className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition">View Work</a>
-          <a href="#contact" className="border-2 border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition">Get in Touch</a>
+          <button 
+            onClick={() => {
+              document.getElementById('work').scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition"
+          >
+            View Work
+          </button>
+          <button 
+            onClick={() => {
+              document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="border-2 border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition"
+          >
+            Get in Touch
+          </button>
         </div>
       </div>
     </div>
-  );
+);
 
   const aboutSection = (
     <div className="py-20 px-8 bg-gray-50">
