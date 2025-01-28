@@ -5,9 +5,10 @@ import AboutSection from './sections/About';
 import SkillsSection from './sections/Skills';
 import ContactSection from './sections/Contact';
 import ExperienceSection from './sections/Experience';
+import EducationSection from './sections/Education';
 
 const Portfolio = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const [activeSection, setActiveSection] = useState('home');
 
   // Toggle dark mode
@@ -28,6 +29,7 @@ const Portfolio = () => {
       <AboutSection darkMode={darkMode}/>
       <SkillsSection darkMode={darkMode}/>
       <ExperienceSection darkMode={darkMode}/>
+      <EducationSection darkMode={darkMode}/>
       <ContactSection darkMode={darkMode}/>
     </div>
   );
