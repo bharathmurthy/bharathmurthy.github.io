@@ -137,7 +137,7 @@ const HeroSection = ({ handleScroll, darkMode }) => {
       </div>
       <div className="max-w-4xl mx-auto text-center">
         <img
-          src="./images/profile.png"
+          src="./images/profile_v1.jpg"
           alt="Kumar Murthy"
           className="w-56 h-56 rounded-full mx-auto mb-6 shadow-lg transform transition-transform duration-500 hover:scale-110 object-cover object-center"
         />

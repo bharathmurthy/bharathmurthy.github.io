@@ -6,6 +6,15 @@ import SkillsSection from './sections/Skills';
 import ContactSection from './sections/Contact';
 import ExperienceSection from './sections/Experience';
 import EducationSection from './sections/Education';
+import TestimonialsSection from './sections/Testimoinals';
+import ReactGA from 'react-ga4';
+
+const trackClick = (label) => {
+  ReactGA.event({
+    category: "User",
+    action: `Clicked ${label}`,
+  });
+};
 
 const Portfolio = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -14,11 +23,13 @@ const Portfolio = () => {
   // Toggle dark mode
   const toggleDarkMode = () => {
     console.log("Dark Mode : ", darkMode);
+    trackClick(darkMode ? 'Light Mode' : 'Dark Mode');
     setDarkMode(!darkMode);
   };
 
   // Smooth scrolling function
   const handleScroll = (sectionId) => {
+    trackClick(sectionId);
     document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -27,6 +38,7 @@ const Portfolio = () => {
       <ModernDarkModeToggle toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
       <HeroSection handleScroll={handleScroll} darkMode={darkMode}/>
       <AboutSection darkMode={darkMode}/>
+      <TestimonialsSection darkMode={darkMode}/>
       <SkillsSection darkMode={darkMode}/>
       <ExperienceSection darkMode={darkMode}/>
       <EducationSection darkMode={darkMode}/>

@@ -8,7 +8,7 @@ const AboutSection = ({ darkMode }) => {
         <h2 className="text-3xl font-bold mb-12 text-center">About Me</h2>
         <div className="mb-8">
           <h3 className="text-xl font-semibold mb-4">Professional Profile</h3>
-          <p className="mb-4">
+          <p className="mb-4 text-justify">
             As a highly experienced and motivated senior product manager, I have a proven track record of delivering complex software projects within tight deadlines for SaaS applications. With a strong background in full-stack development and a deep understanding of modern development technologies, I am able to quickly grasp new systems and technologies to provide insightful recommendations and solutions. I have a passion for coding and take pride in creating clean, maintainable, and scalable code. I am a quick learner and a great team player, able to effectively communicate and collaborate with both technical and non-technical stakeholders.
           </p>
         </div>
@@ -26,7 +26,7 @@ const AboutSection = ({ darkMode }) => {
         <div className="grid md:grid-cols-2 gap-20 w-full">
           <div>
             <h3 className="text-xl font-semibold mb-4">Professional Side</h3>
-            <p className={`mb-4 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+            <p className={`mb-4 ${darkMode ? 'text-gray-300' : 'text-gray-600'} text-justify`}>
               As a Senior Product Manager at Five9, I lead the next-generation IVA Studio platform, leveraging Generative AI to revolutionize bot development. With a strong background in full-stack development, I bridge the gap between technical excellence and product vision.
             </p>
             <div className="grid grid-cols-3 gap-8">
@@ -46,7 +46,7 @@ const AboutSection = ({ darkMode }) => {
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-4">Personal Side</h3>
-            <p className={`mb-4 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+            <p className={`mb-4 ${darkMode ? 'text-gray-300' : 'text-gray-600'} text-justify`}>
               Beyond the code and product meetings, I'm a fun-loving individual who believes in maintaining a perfect work-life balance. I'm passionate about traveling, exploring new cultures, and bringing that global perspective to my work. I also enjoy hiking, bushwalking, cycling, and have climbed Mount Diablo on my bicycle three times so far.
             </p>
             <div className="grid grid-cols-3 gap-8">
