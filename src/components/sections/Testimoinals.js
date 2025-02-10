@@ -27,6 +27,7 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
  */
 
 const TestimonialsSection = ({ darkMode }) => {
+  const swiperRef = useRef(null);
   const testimonials = [
     {
       name: "Callan Schebella",
@@ -76,10 +77,11 @@ const TestimonialsSection = ({ darkMode }) => {
               slidesPerView: 2,
             },
           }}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
-              <TestimonialCard testimonial={testimonial} darkMode={darkMode} />
+              <TestimonialCard testimonial={testimonial} darkMode={darkMode} swiperInstance={swiperRef.current}/>
             </SwiperSlide>
           ))}
         </Swiper>
@@ -88,7 +90,7 @@ const TestimonialsSection = ({ darkMode }) => {
   );
 };
 
-const TestimonialCard = ({ testimonial, darkMode }) => {
+const TestimonialCard = ({ testimonial, darkMode, swiperInstance }) => {
   const [expanded, setExpanded] = useState(false);
   const [canClamp, setCanClamp] = useState(false);
 
@@ -117,6 +119,15 @@ const TestimonialCard = ({ testimonial, darkMode }) => {
     }
   }, []);
 
+  const handleToggleExpand = () => {
+    if (!expanded) {
+      swiperInstance.autoplay.stop();
+    } else {
+      swiperInstance.autoplay.start();
+    }
+    setExpanded(!expanded);
+  };
+
   return (
     <div
       className={`flex flex-col items-center p-10 rounded-lg shadow-md transition-colors duration-300
@@ -138,7 +149,7 @@ const TestimonialCard = ({ testimonial, darkMode }) => {
 
       {/* Show the toggle if we can clamp */}
       {canClamp && (
-        <button onClick={() => setExpanded(!expanded)} className="text-blue-500 mb-2">
+        <button onClick={handleToggleExpand} className="text-blue-500 mb-2">
           {expanded ? 'See Less' : 'See More'}
         </button>
       )}
