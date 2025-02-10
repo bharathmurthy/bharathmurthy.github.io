@@ -32,7 +32,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "set NODE_OPTIONS=--openssl-legacy-provider && npm run build",
-    "deploy": "set NODE_OPTIONS=--openssl-legacy-provider && gh-pages -d build"
+    "deploy": "set NODE_OPTIONS=--openssl-legacy-provider && gh-pages -d build --repo https://x-access-token:${GITHUB_TOKEN}@github.com/bharathmurthy/bharathmurthy.github.io.git"
   },
   "eslintConfig": {
     "extends": [
