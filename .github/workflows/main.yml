@@ -16,14 +16,20 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'  # Change this to your preferred Node.js version
+          node-version: '16'  # Adjust as needed
 
       - name: Install Dependencies
         run: npm install
 
-      # If your project requires a build step, include it:
+      # (Optional) Build the project if required
       - name: Build Project
         run: npm run build
+
+      # Configure Git identity for the gh-pages deployment
+      - name: Configure Git Identity
+        run: |
+          git config --global user.email "bharathmurthy1992@gmail.com"
+          git config --global user.name "Kumar Murthy"
 
       - name: Deploy to GitHub Pages
         env:
