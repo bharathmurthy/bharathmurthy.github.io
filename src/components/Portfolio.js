@@ -10,9 +10,11 @@ import TestimonialsSection from './sections/Testimoinals';
 import ReactGA from 'react-ga4';
 
 const trackClick = (label) => {
+  console.log("Tracking Event: ", label); // Debugging
   ReactGA.event({
     category: "User",
     action: `Clicked ${label}`,
+    label: label,
   });
 };
 

@@ -7,7 +7,9 @@ import ReactGA from 'react-ga4';
 
 // Initialize Google Analytics
 const TRACKING_ID = "G-K19KZ9EEV1";  // Replace with your actual Measurement ID
-ReactGA.initialize(TRACKING_ID);
+ReactGA.initialize(TRACKING_ID, {
+  debug: true,
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
