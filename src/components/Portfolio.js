@@ -6,7 +6,7 @@ import SkillsSection from './sections/Skills';
 import ContactSection from './sections/Contact';
 import ExperienceSection from './sections/Experience';
 import EducationSection from './sections/Education';
-import TestimonialsSection from './sections/Testimoinals';
+import TestimonialsSection from './sections/Testimonials';
 import ReactGA from 'react-ga4';
 
 const trackClick = (label) => {
@@ -20,7 +20,6 @@ const trackClick = (label) => {
 
 const Portfolio = () => {
   const [darkMode, setDarkMode] = useState(true);
-  const [activeSection, setActiveSection] = useState('home');
 
   // Toggle dark mode
   const toggleDarkMode = () => {

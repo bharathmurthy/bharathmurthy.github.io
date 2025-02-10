@@ -136,7 +136,7 @@ const TestimonialCard = ({ testimonial, darkMode, swiperInstance }) => {
     >
       <img
         src={testimonial.photo}
-        alt={`${testimonial.name}'s photo`}
+        alt={`${testimonial.name}`}
         className="w-24 h-24 rounded-full border-2 border-gray-300 mb-6 object-cover"
       />
       {/* Only clamp if not expanded */}

@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Menu, Github, Linkedin, Mail, Target } from 'lucide-react';
 
 const HeroSection = ({ handleScroll, darkMode }) => {
   useEffect(() => {
