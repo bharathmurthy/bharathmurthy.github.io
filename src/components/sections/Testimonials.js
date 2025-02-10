@@ -126,14 +126,16 @@ const TestimonialCard = ({ testimonial, darkMode, swiperInstance }) => {
   }, []);
 
   const handleToggleExpand = () => {
-    if (!expanded) {
-      swiperInstance.autoplay.stop();
-    } else {
-      swiperInstance.autoplay.start();
+    if (swiperInstance && swiperInstance.autoplay) {
+      if (!expanded) {
+        swiperInstance.autoplay.stop();
+      } else {
+        swiperInstance.autoplay.start();
+      }
     }
     setExpanded(!expanded);
   };
-
+  
   return (
     <div
       className={`flex flex-col items-center p-10 rounded-lg shadow-md transition-colors duration-300
@@ -148,7 +150,9 @@ const TestimonialCard = ({ testimonial, darkMode, swiperInstance }) => {
       {/* Only clamp if not expanded */}
       <div
         ref={textRef}
-        className={`text-lg italic mb-4 overflow-hidden transition-all duration-300 ${!expanded && 'line-clamp-4'}`}
+        className={`text-lg italic mb-4 transition-all duration-300 ${
+          expanded ? '' : 'overflow-hidden line-clamp-4'
+        }`}
       >
         “{testimonial.content}”
       </div>
